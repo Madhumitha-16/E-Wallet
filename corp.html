@@ -1,0 +1,62 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/style_pay.css">
+  <title>Sign in</title>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgba(30, 39, 80, 0.884);;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+	<ul>
+        <li style="float:right;"><a href="/login.html">Logout</a></li>
+        <li style="float:right;"><a href="/payment.html">Payments</a></li>
+        <li style="float:right;"><a href="/transaction.html">Transaction History</a></li>
+        <li style="float:right;"><a href="/check.html">Check Wallet Points</a></li>
+        <li style="float:right;"><a href="/add.html">Add Wallet Points</a></li>
+        <li style="float:left; font-size: 30px;"><a href="/login.html">E-Wallet</a></li>
+    </ul>
+	<div id="main" class="main-container">
+		<div class="image">
+			<h2 style="text-align: center; font-size: 200%; color: rgba(30, 39, 80, 0.884);">Tax Payment</h2>
+		</div>
+        <div class="box">
+        <form>
+            <label>Tax</label>
+            <div class="input-box">
+                <select name="Tax" id="dth">
+                    <option value="Corp">Airtel DTH</option>
+                    <option value="Water">Tata Play</option>
+                  </select>
+              </div>
+			<div class="input-box">
+			  <input id="dthno" type="text" name="" required="" placeholder="Service Number">
+			</div>
+			<div class="input-box">
+			  <input id="amount" type="text" name="" required="" placeholder="Amount">
+			 
+			</div>
+			<input id="pay_option" type="submit" name="pay_option" value="Pay option">
+            
+		  </form>
+        </div>	
+</body>
+
+</html>
