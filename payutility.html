@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style_pay.css">
   <title>Sign in</title>
   <style>
     ul {
@@ -36,8 +36,29 @@
     </ul>
 	<div id="main" class="main-container">
 		<div class="image">
-			<h2 style="text-align: center; font-size: 200%; color: rgba(30, 39, 80, 0.884);">Payment</h2>
+			<h2 style="text-align: center; font-size: 200%; color: rgba(30, 39, 80, 0.884);">Pay Utility</h2>
 		</div>	
+
+    <div class="box">
+      <form>
+          <label>Bill Type</label>
+          <div class="input-box">
+              <select name="dth" id="dth">
+                  <option value="Electricity Bill">Electricity Bill</option>
+                  <option value="Telephone Bill">Telephone Bill</option>
+                 
+                </select>
+            </div>
+    <div class="input-box">
+      <input id="dthno" type="text" name="" required="" placeholder="Service Number">
+    </div>
+    <div class="input-box">
+      <input id="amount" type="text" name="" required="" placeholder="Amount">
+     
+    </div>
+    <input id="pay_option" type="submit" name="pay_option" value="Pay Options">
+    </form>
+      </div>	
 </body>
 
 </html>

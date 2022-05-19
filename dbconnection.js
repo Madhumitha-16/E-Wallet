@@ -1,5 +1,6 @@
-
+function saveAccount(){
 var mysql = require('mysql');
+console.log("dbcon");
 
 var con = mysql.createConnection({
   host: "localhost",
@@ -16,17 +17,18 @@ con.connect(function(err) {
     console.log(result);
   });
 });
-// var cusname = document.getElementById("name").value;
-// var email = document.getElementById("email").value;
-// var bankType = document.getElementById("banks").value;
-// var accountNo = document.getElementById("accno").value;
-// var pwd = document.getElementById("user-pass").value;
+var cusname = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var bankType = document.getElementById("banks").value;
+var accountNo = document.getElementById("accno").value;
+var pwd = document.getElementById("user-pass").value;
 
-// var sql = "INSERT INTO Customer (id,cusname, email,bankType, accountNo, pwd) VALUES (NULL,'"+cusname+ "', '"+email+"','"+bankType+"','"+accountNo+"','"+pwd+"')";
+var sql = "INSERT INTO Customer (id,cusname, email,bankType, accountNo, pwd) VALUES (NULL,'"+cusname+ "', '"+email+"','"+bankType+"','"+accountNo+"','"+pwd+"')";
 
-// con.query(sql, function (err, result) {
-//   if (err) {
-//       throw err;
-//   }
-//   console.log(result.affectedRows + " record(s) updated");
-// });
+con.query(sql, function (err, result) {
+  if (err) {
+      throw err;
+  }
+  console.log(result.affectedRows + " record(s) updated");
+});
+}
