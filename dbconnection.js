@@ -1,4 +1,4 @@
-function saveAccount(){
+
 var mysql = require('mysql');
 console.log("dbcon");
 
@@ -17,6 +17,8 @@ con.connect(function(err) {
     console.log(result);
   });
 });
+
+function SaveAccount(myform){
 var cusname = document.getElementById("name").value;
 var email = document.getElementById("email").value;
 var bankType = document.getElementById("banks").value;

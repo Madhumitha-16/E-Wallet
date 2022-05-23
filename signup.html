@@ -3,7 +3,7 @@
 <head>
 
   <link rel="stylesheet" href="/signup.css">
-  <script src="/dbconnection.js"></script>
+  <script src="formValidation.js"></script>
 
   <title>Sign in</title>
   <style>
@@ -26,13 +26,7 @@
       padding: 14px 16px;
       text-decoration: none;
     }
-    </style>
-    <script type="text/javascript">  
-       function Redirect() {
-               window.location = "http://127.0.0.1:5500/login.html";
-            }            
-      </script>   
-      
+    </style>    
 </head>
 
 <body>
@@ -41,17 +35,18 @@
       </ul>
 	<div id="main" class="main-container">
 	<div class="image">
-		<img src="/images/signup.jpg" height="500" width="800">
+		<img src="/images/signup.jpg" height="500" width="800" style="margin-left: 10%;">
 	</div>
 		<div class="box">
 		  <h2>Sign Up</h2>
-		  <form name="myform" method="post">
+		  <form name="myform" action="login.html" method="post">
 			<div class="input-box">
         <input id="name" type="text" name="name" required="required" placeholder="Name">
 			  <input id="email" type="email" name="email" required="" placeholder="Email">
 			</div>
             <label>Select Bank</label>
             <div class="input-box">
+
                 <select name="banks" id="banks">
                     <option value="Axis">Axis</option>
                     <option value="ICICI">ICICI</option>
@@ -66,9 +61,9 @@
 			  <input id="user-pass" type="password" name="pwd" required="This field is required" placeholder="Password">
 			</div>
             <div class="input-box">
-                <input id="user-pass-conf" type="password" name="" required="" placeholder="Confirm Password">
+                <input id="user-pass-conf" type="password" name="cpwd" required="" placeholder="Confirm Password">
               </div>
-              <button type="submit" style="color: rgba(30, 39, 80, 0.884);" onclick="Redirect()">Submit</button>
+              <button type="submit" style="color: rgba(30, 39, 80, 0.884); padding: 2% 2%;" onclick="validateForm()">Submit</button>
 		  </form>
 		  <p><a href="/login.html">Already a user?</a></p>
 		  <p><a href="/login.html">Login</a></p>

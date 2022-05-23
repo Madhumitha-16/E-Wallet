@@ -38,6 +38,10 @@ body {
 .box .input-box {
   position: relative;
 }
+a{
+  color:rgba(30, 39, 80, 0.884);
+  text-decoration: none;
+}
 
 .box .input-box input {
   width: 100%;
@@ -106,9 +110,6 @@ body {
   background-color: #f5f9fc;
 }
 
-.rwd-table tr:nth-child(odd):not(:first-child) {
-  background-color: #ebf3f9;
-}
 
 .rwd-table th {
   display: none;
@@ -116,22 +117,6 @@ body {
 
 .rwd-table td {
   display: block;
-}
-
-.rwd-table td:first-child {
-  margin-top: .5em;
-}
-
-.rwd-table td:last-child {
-  margin-bottom: .5em;
-}
-
-.rwd-table td:before {
-  content: attr(data-th) ": ";
-  font-weight: bold;
-  width: 120px;
-  display: inline-block;
-  color: #000;
 }
 
 .rwd-table th,
@@ -201,18 +186,5 @@ h3 {
   font-size: 1.5em;
   color: #cecece;
 }
-h3:before {
-  content: "\25C0";
-  position: absolute;
-  left: -50px;
-  -webkit-animation: leftRight 2s linear infinite;
-  animation: leftRight 2s linear infinite;
-}
-h3:after {
-  content: "\25b6";
-  position: absolute;
-  right: -50px;
-  -webkit-animation: leftRight 2s linear infinite reverse;
-  animation: leftRight 2s linear infinite reverse;
-}
+
 
