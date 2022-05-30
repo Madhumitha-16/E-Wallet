@@ -34,3 +34,4 @@ con.query(sql, function (err, result) {
   console.log(result.affectedRows + " record(s) updated");
 });
 }
+module.exports=con;
